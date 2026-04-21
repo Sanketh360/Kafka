@@ -1,0 +1,11 @@
+docker exec -it kafka bash    -- take me inside the kafka container to exec                                
+
+kafka-topics --create --topic my-topic --bootstrap-server localhost:9092 --  partitions 3 --replication-factor 1           ( --- create the topic inside the kafka  )
+         
+
+ kafka-topics --list --bootstrap-server localhost:9092    ( --- list all the topics ) 
+
+
+kafka-console-consumer   --topic my-topic   --bootstrap-server localhost:9092  --from-beginning   (--create a consumer) 
+
+kafka-console-producer   --topic my-topic   --bootstrap-server localhost:9092  --from-beginning    (--create a producer) 
